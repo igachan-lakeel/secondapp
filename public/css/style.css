@@ -1,0 +1,107 @@
+/* 全体的なスタイリング */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #F5F5F5;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #444;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 投稿リンク */
+a, button[type="submit"] {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* ボタンホバー効果 */
+a:hover, button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* 特殊なボタンスタイル */
+form .btn {
+  background-color: #dc3545; /* 削除ボタン特有の色 */
+}
+
+form .btn:hover {
+  background-color: #c82333; /* ホバー時の色 */
+}
+
+/* 投稿カード */
+.post {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.left-contents, .right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.post-date {
+  color: #888;
+  font-size: 14px;
+}
+
+.post-content {
+  color: #444;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
+/* フォームスタイリング */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* パディングとボーダーを幅に含める */
+}
+
+/* レスポンシブデザイン対応 */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+
+  .post {
+    flex-direction: column;
+  }
+
+  input[type="text"], button[type="submit"], a {
+    width: 100%;
+  }
+}
